@@ -1,70 +1,83 @@
-// DAY 17 JUNE
+// // // DAY 17 JUNE
 
 
-// const parent = document.getElementsByClassName("parent");
+// // // const parent = document.getElementsByClassName("parent");
 
-const button = document.getElementById("btn");
+// // const button = document.getElementById("btn");
 
-console.dir(button);
+// // console.dir(button);
 
-function tradationalFn() {
-    console.log("Traditional function called");
-}
-
-
-const arrowFn = () => {
-    console.log("Arrow function called");
-};
+// // function tradationalFn() {
+// //     console.log("Traditional function called");
+// // }
 
 
-tradationalFn();
-arrowFn();
+// // const arrowFn = () => {
+// //     console.log("Arrow function called");
+// // };
 
 
-// Traditional FN EVENT CALL 
-// button.addEventListener("click", function() {
-//   console.log("Button clicked");
-// });
-
-// Arrow FN EVENT CALL
-button.addEventListener("click", () => {
-    console.log("Button clicked with arrow function");
-    loops();
-    printName();
-    done();
-});
-
-const loops = () => {
-    for (let i = 0; i < 5; i++) {
-        console.log(i);
-    }
-}
-
-const printName = () => {
-    console.log("My name is ......");
-}
+// // tradationalFn();
+// // arrowFn();
 
 
-function done () {
-    console.log("Done");
-}
+// // // Traditional FN EVENT CALL 
+// // // button.addEventListener("click", function() {
+// // //   console.log("Button clicked");
+// // // });
+
+// // // Arrow FN EVENT CALL
+// // button.addEventListener("click", () => {
+// //     console.log("Button clicked with arrow function");
+// //     loops();
+// //     printName();
+// //     done();
+// // });
+
+// // const loops = () => {
+// //     for (let i = 0; i < 5; i++) {
+// //         console.log(i);
+// //     }
+// // }
+
+// // const printName = () => {
+// //     console.log("My name is ......");
+// // }
 
 
-// parent.addEventListener("click", function(e) {
-//   console.log("Parent clicked");
-// });
+// // function done () {
+// //     console.log("Done");
+// // }
 
 
-const inputBox = document.getElementById("input");
-const submitButton = document.getElementById("submitBtn");
+// // // parent.addEventListener("click", function(e) {
+// // //   console.log("Parent clicked");
+// // // });
 
-const output = document.getElementById("output");
+
+// // const inputBox = document.getElementById("input");
+// // const submitButton = document.getElementById("submitBtn");
+
+// // const output = document.getElementById("output");
 
 
-submitButton.addEventListener("click", (e) => {
-    console.log("Input value:", inputBox.value);
-    output.innerText = inputBox.value; 
-})
+// // submitButton.addEventListener("click", (e) => {
+// //     console.log("Input value:", inputBox.value);
+// //     output.innerText = inputBox.value; 
+// // })
 
-console.dir(inputBox);
+// // console.dir(inputBox);
 
+// const inputField = document.getElementsByClassName("inputField");
+// const inputId = document.getElementById("inputId");
+
+
+// console.log(inputField);
+// inputField[0].addEventListener("iniput", (e) => {
+//     console.log(e.target.value)
+// })
+// // console.log(inputId);
+
+console.log("Hello it is working")
+
+console.log(Math.random())

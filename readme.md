@@ -1,6 +1,6 @@
 <!-- Git get to go  -->
 
-git init 
+git init  
 git add . || add <File Name>
 
 git commit -m "commit Message"
