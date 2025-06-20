@@ -243,23 +243,18 @@
 
 let arr = [];
 
-// fetch("https://fakestoreapi.com/products")
-//   .then((data) => {
-    // return data.json();
-//   })
-//   .then((data) => {
-    // console.log(data);
-    // arr = data;
-    // showProducts(data);
-//   });
+fetch("https://fakestoreapi.com/products")
+  .then((data) => {
+    return data.json();
+  })
+  .then((data) => {
+    showProducts(data);
+  });
 
 
 async function apiDataCall() {
     const jData = await fetch("https://fakestoreapi.com/products");
-    console.log(jData)
     const data = await jData.json();
-    console.log(data);
-    // arr = data;
     showProducts(data);
 }
 
