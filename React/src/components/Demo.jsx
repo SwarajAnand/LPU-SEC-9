@@ -1,29 +1,38 @@
 import { useState } from "react";
 import Test from "./Test";
+import CustomButton from "./CustomButton";
 
-function Demo() {
+function Demo(prop) {
+  console.log(prop);
   const name = "TEST NAME";
   var ans = 0;
 
-  const [sum, setSum] = useState(0);
+  const [sum, setSum] = useState(prop.data.name);
 
-  console.log(sum);
+  //   console.log(sum);
 
   const addVal = () => {
     ans = ans + 10;
     // console.log(ans);
     setSum(sum + 1);
-  }
+  };
 
-  console.log("Demo is rendered");
+  //   console.log("Demo is rendered");
   return (
     <>
       <h1>Hello {name}</h1>
       <div>{sum}</div>
       <Test />
-      <button onClick={addVal}>Click Me</button>
+      {/* <button onClick={addVal}>Click Me</button> */}
+
+      <CustomButton buttonData={{ name: "Submit", color: "green" }} />
+      {/* <CustomButton name="Submit" color="green" />
+      <CustomButton name="Submit" color="red" />
+      <CustomButton name="Submit" color="yellow" />
+      <CustomButton name="Submit" color="sky" />
+      <CustomButton name="Submit" color="magwenta" /> */}
     </>
-  )
+  );
 }
 
-export default Demo
+export default Demo;
