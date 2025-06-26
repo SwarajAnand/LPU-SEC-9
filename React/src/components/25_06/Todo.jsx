@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { themeDetail } from "../../ContextThemeProvider";
 
 const Todo = () => {
+  const { theme, setTheme } = useContext(themeDetail);
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
 
@@ -40,17 +42,20 @@ const Todo = () => {
         {todos.map((ele) => {
           return (
             <div key={ele.id}>
-              {
-                ele.isDone ? (
-                  <del onClick={() => changeTaskState(ele.id)}>{ele.value}</del>
-                ) : (
-                  <span onClick={() => changeTaskState(ele.id)}>{ele.value}</span>
-                )
-              }
+              {ele.isDone ? (
+                <del onClick={() => changeTaskState(ele.id)}>{ele.value}</del>
+              ) : (
+                <span onClick={() => changeTaskState(ele.id)}>{ele.value}</span>
+              )}
             </div>
           );
         })}
       </div>
+
+      <h1>Theme From the TODO APP : {theme}</h1>
+
+      <button onClick={() => setTheme("light")}>Light</button>
+      <button onClick={() => setTheme("dark")}>Dark</button>
     </div>
   );
 };

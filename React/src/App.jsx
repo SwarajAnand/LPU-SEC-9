@@ -1,31 +1,21 @@
-import { createContext } from "react";
-import WeatherComponent from "./components/24_06_EVE/WeatherComponent";
-import Accordion from "./components/25_06/Accordion";
-import Todo from "./components/25_06/Todo";
-import DetailProp from "./components/DetailProp";
+import { useContext } from 'react';
+import { themeDetail } from './ContextThemeProvider.jsx';
+import Todo from './components/25_06/Todo.jsx';
 
-function App() {
-  const themeContext = createContext();
+const App = () => {
+  const data = useContext(themeDetail);
+  const { name } = data;
 
-  console.log(themeContext);
+  console.log(data);
 
-  console.log("App is rendered");
   return (
-    <>
-      {/* <Demo data={{ name: "TEST NAME" , age: 20, gender: "male"}} /> */}
-      {/* <WeatherComponent /> */}
-      {/* <Todo /> */}
-      {/* <Accordion /> */}
+    <div>
+      <h1>Theme: {data.theme}</h1>
+      <p>Name: {name}</p>
 
-      <DetailProp>
-        <Todo />
-      </DetailProp>
-    </>
+      <Todo />
+    </div>
   );
-}
+};
 
 export default App;
-
-// cc0c6f2482424f69bd874449252406
-
-// http://api.weatherapi.com/v1/current.json?key=cc0c6f2482424f69bd874449252406&q=India&aqi=no
