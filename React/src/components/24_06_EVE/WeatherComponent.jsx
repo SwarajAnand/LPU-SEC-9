@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import WeatherCard from "./WeatherCard";
 
 const WeatherComponent = () => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("india");
   const [data, setData] = useState(null);
   const [arr, setArr] = useState([]);
   const apiKey = "cc0c6f2482424f69bd874449252406";

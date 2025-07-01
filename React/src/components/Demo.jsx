@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Test from "./Test";
 import CustomButton from "./CustomButton";
+import { Outlet } from "react-router-dom";
 
 function Demo(prop) {
   console.log(prop);
   const name = "TEST NAME";
   var ans = 0;
 
-  const [sum, setSum] = useState(prop.data.name);
+  const [sum, setSum] = useState(prop?.data?.name);
 
   //   console.log(sum);
 
@@ -22,6 +23,7 @@ function Demo(prop) {
     <>
       <h1>Hello {name}</h1>
       <div>{sum}</div>
+      <Outlet />
       <Test />
       {/* <button onClick={addVal}>Click Me</button> */}
 
