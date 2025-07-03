@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const UserCard = React.memo(({ user }) => {
+const UserCard = React.memo (({ user }) => {
     console.log("UserCard rerender");
   return (
     <motion.div
@@ -19,3 +19,4 @@ const UserCard = React.memo(({ user }) => {
 });
 
 export default UserCard;
+ 789
