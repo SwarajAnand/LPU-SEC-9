@@ -6,6 +6,7 @@ import ErrorPage from './components/1_07/ErrorPage'
 import DynamicRoute from './components/1_07/DynamicRoute'
 import { useDispatch, useSelector } from 'react-redux'
 import { decrement, increment } from './counterSlice'
+import Parent from './components/3_07/Parent'
 
 const AppRouter = () => {
   const navigate = useNavigate();
@@ -27,15 +28,15 @@ const AppRouter = () => {
   return (
     <div>
     <NavBar />
-    <p className='text-4xl'>Counter Value: {counterValue}</p> <br />
+    {/* <p className='text-4xl'>Counter Value: {counterValue}</p> <br /> */}
 
-    <button onClick={() => dispatch(increment())}>Increment</button>
-    <button onClick={() => dispatch(decrement())}>Decrement</button>
+    {/* <button onClick={() => dispatch(increment())}>Increment</button> */}
+    {/* <button onClick={() => dispatch(decrement())}>Decrement</button> */}
 
 
-    <button onClick={navigateToWeather}>Click Me to go to Weather</button>
+    {/* <button onClick={navigateToWeather}>Click Me to go to Weather</button> */}
       <Routes>
-        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/" element={<Parent />} />
         <Route path="/weather" element={<WeatherComponent />} />
         <Route path="/contact" element={<h1>Contact Page</h1>} />
         <Route path="test/:id" element={<DynamicRoute />} />
