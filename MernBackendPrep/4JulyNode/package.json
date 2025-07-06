@@ -1,0 +1,12 @@
+{
+  "name": "4julynode",
+  "version": "1.0.0",
+  "description": "A simple node CLI project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js"
+  },
+  "author": "Swaraj Anand",
+  "license": "ISC"
+}
