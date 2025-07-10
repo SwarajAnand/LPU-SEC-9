@@ -38,7 +38,9 @@ const deleteBlog = async (req, res) => {
     if (!blog) return res.status(404).json({ message: "Blog not found" });
 
     if (!blog.createdBy.equals(req.user._id)) {
-      return res.status(403).json({ message: "Not authorized to delete this blog" });
+      return res
+        .status(403)
+        .json({ message: "Not authorized to delete this blog" });
     }
 
     await blog.deleteOne();
