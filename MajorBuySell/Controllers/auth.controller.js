@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const generateAccessToken = (userId) => {
-  return jwt.sign({ id: userId }, "secret", { expiresIn: "1h" });
+  return jwt.sign({ id: userId }, "secret", { expiresIn: "2h" });
 };
 
 const generateRefreshToken = (userId) => {
@@ -122,3 +122,31 @@ module.exports = {
   refreshAccessToken,
   logout,
 };
+
+
+
+// promise 
+// async await
+// callback
+// Asynchronous JS
+// event loop
+// Events
+// Access Modifiers
+// Let Const Var
+// Hoisting
+// Closures
+// HOF
+
+
+// Redux
+// Context API
+// Prop Drilling
+// useState
+// useEffect
+// useContext
+// Conditional Rendering
+// Lists and Keys
+// Virtual DOM
+// React Router
+
+// Backend
