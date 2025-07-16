@@ -12,7 +12,7 @@ const uploadOnCloudinary = async (localFilePath) => {
     const formattedPath = path.resolve(localFilePath).replace(/\\/g, "/");
 
     const result = await cloudinary.uploader.upload(formattedPath, {
-      resource_type: "image",
+      resource_type: "image", 
     });
 
     fs.unlinkSync(formattedPath); // Cleanup local file after upload
