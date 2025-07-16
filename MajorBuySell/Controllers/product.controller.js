@@ -1,6 +1,6 @@
 // controllers/product.controller.js
 
-const Product = require("../models/product.model");
+const Product = require("../Models/product.model");
 const uploadOnCloudinary = require("../Utils/uploadOnCloudinary");
 
 // ========== CREATE PRODUCT ==========
