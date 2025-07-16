@@ -3,7 +3,7 @@ const router = express.Router();
 
 const auth = require("../Middlewares/auth");
 const upload = require("../Middlewares/upload");
-const productController = require("../controllers/product.controller");
+const productController = require("../Controllers/product.controller");
 
 // =================== CREATE PRODUCT ===================
 router.post("/", auth, upload.single("image"), productController.createProduct);
