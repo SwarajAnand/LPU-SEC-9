@@ -1,11 +1,14 @@
 const express = require("express");
 const app = express();
+var cors = require('cors')
 const port = 3000;
 
 const connectDB = require("./DB/db");
 const authRoutes = require("./Routes/auth.route");
 const productRoutes = require("./Routes/product.route");
 
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
